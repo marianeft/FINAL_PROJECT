@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App'; // Import the main component
 vi.mock('./components/Header', () => ({ default: () => <div data-testid="header-component">Header Component</div> }));
-vi.mock('./components/MovieLinkInput', () => ({ default: ({ movieLink, setMovieLink, onAnalyze }) => ( ... ) })); // Adjust props mock if needed
+vi.mock('./components/MovieLinkInput', () => ({ default: ({ movieLink, setMovieLink, onAnalyze }) => <div data-testid="movie-link-input">Mocked MovieLinkInput</div> })); // Adjust props mock if needed
 vi.mock('./components/UserReviews', () => ({ default: () => <div data-testid="user-reviews">User Reviews Component</div> }));
 vi.mock('./components/ResultsSection', () => ({ default: () => <div data-testid="results-section">Results Section Component</div> }));
 
